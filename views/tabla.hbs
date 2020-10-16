@@ -1,0 +1,26 @@
+<h1 class="mt-3">Resultado</h1>
+
+{{#if cuotas}}
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Periodo</th>
+            <th scope="col">Depositos</th>
+            <th scope="col">Interes ({{tasaInteres}}%)</th>
+            <th scope="col">Saldo final</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each cuotas}}
+        <tr>
+            <th scope="row">{{periodos}}</th>
+            <th scope="row">{{depositos}}</th>
+            <th scope="row">{{intereses}}</th>
+            <th scope="row">{{saldo}}</th>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{/if}}
+
+<a href="/" class="btn btn-primary mt-3">Volver</a>
